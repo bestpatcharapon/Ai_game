@@ -1,0 +1,13 @@
+# Windows Zone.Identifier files (created when downloading from internet)
+*:Zone.Identifier
+
+# Node modules
+node_modules/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
