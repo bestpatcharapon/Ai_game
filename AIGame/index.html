@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>เกมบันไดงู - Snakes and Ladders</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <button class="theme-toggle" id="theme-toggle" aria-label="Toggle dark mode">
+        <span class="sun-icon">☀️</span>
+        <span class="moon-icon">🌙</span>
+    </button>
+    <div class="container">
+        <header>
+            <h1>🎲 เกมบันไดงู 🐍</h1>
+        </header>
+
+        <div class="game-container">
+            <div class="info-panel">
+                <div class="player-info">
+                    <div class="player-card" id="player1-card">
+                        <h3>🔴 ผู้เล่น 1</h3>
+                        <p>ตำแหน่ง: <span id="player1-pos">0</span></p>
+                    </div>
+                    <div class="player-card" id="player2-card">
+                        <h3>🔵 ผู้เล่น 2</h3>
+                        <p>ตำแหน่ง: <span id="player2-pos">0</span></p>
+                    </div>
+                </div>
+
+                <div class="current-turn">
+                    <p>🎯 เทิร์นของ: <span id="current-player">ผู้เล่น 1</span></p>
+                </div>
+
+                <div class="dice-container">
+                    <div class="dice" id="dice">
+                        <span id="dice-value">?</span>
+                    </div>
+                    <button id="roll-btn" class="btn-roll">ทอยเต๋า</button>
+                </div>
+
+                <div class="game-log">
+                    <h4>📜 บันทึกการเล่น</h4>
+                    <div id="log-content"></div>
+                </div>
+
+                <button id="restart-btn" class="btn-restart">เริ่มเกมใหม่</button>
+            </div>
+
+            <div class="board-container">
+                <div id="game-board" class="board"></div>
+            </div>
+        </div>
+
+        <div id="win-modal" class="modal hidden">
+            <div class="modal-content">
+                <h2>🎉 ยินดีด้วย! 🎉</h2>
+                <p id="winner-text"></p>
+                <button id="play-again-btn" class="btn-play-again">เล่นอีกครั้ง</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/theme.js"></script>
+    <script src="js/player.js"></script>
+    <script src="js/events.js"></script>
+    <script src="js/board.js"></script>
+    <script src="js/game.js"></script>
+</body>
+</html>
